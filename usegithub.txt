@@ -1,0 +1,86 @@
+1.打开 Git Shell
+
+cd 到 版本库
+
+2.git status 
+
+查看状态 
+
+3.git add -A 
+
+添加新文件 包含所有修改的文件
+
+4.git commit -a
+
+git commit -m "说明"
+
+提交所有修改到 github
+
+5.cd 到一个目录
+
+git init
+
+创建一个版本库
+
+6. git diff xx.txt
+
+查看不同
+
+7.git log
+
+查看修改历史
+
+git log --pretty=oneline
+
+
+8.HEAD   表示当前版本
+  HEAD^  表示上个版本
+  HEAD^^ 表示上上个版本
+  HEAD~100 第100个版本
+
+回退到上个版本
+
+git reset --hard HEAD^
+
+git reset --hard 34444 (commit id)  这样可以回退到任何一个提交的版本
+
+9.cat xxx.txt
+
+查看某个文件
+
+10.查看记录的每一次命令 
+
+git reflog 
+
+通过这个命令可以找到 每个commit版本的 commit id
+
+11.把当前的版本库提交到github
+
+第一次操作:
+
+git remote add origin https://github.com/holylala/gitstudy.git
+
+git push -u origin master  
+
+以后操作可以直接:
+
+git push origin master 
+
+如果本地没有版本库则:
+
+echo # gitstudy >> README.md
+
+git init
+git add README.md
+
+git commit -m "first commit"
+
+git remote add origin https://github.com/holylala/gitstudy.git
+
+git push -u origin master
+
+
+12.如果是删除文件则
+
+git rm 文件名
+git commit

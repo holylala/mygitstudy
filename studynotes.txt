@@ -1,0 +1,72 @@
+﻿github 账号: 
+huangzhenqiong@sina.cn
+默认
+
+
+1.创建全局用户名和Email地址
+
+git config --global user.name "huangzhenqiong"
+git config --global user.email "huangzhenqiong@sina.cn"
+
+
+2.创建版本库
+
+mkdir learngit
+cd learngit
+pwd
+
+git init
+
+3.把文件添加到仓库
+
+git add readme.txt
+
+4.把文件提交到仓库
+
+git commit -m "wrote a readme file" 
+
+5.查看工作区的状态
+
+git status
+
+6.查看修改内容
+
+git diff readme.txt
+
+7.查看修改日志
+
+git log
+git log --pretty=oneline
+
+8.HEAD   表示当前版本
+  HEAD^  表示上个版本
+  HEAD^^ 表示上上个版本
+  HEAD~100 
+
+回退到上个版本
+
+git reset --hard HEAD^
+
+git reset --hard 34444 (commit id)
+
+9.查看记录的每一次命令 
+
+git reflog 
+
+10.
+前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：
+1.“git add”把文件添加进去，实际上就是把文件修改添加到暂存区；
+2.“git commit”提交更改，实际上就是把暂存区的所有内容提交到当前分支。
+因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，
+commit就是往master分支上提交更改。
+你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。
+
+每次修改如果不add到暂存区,那就不会加入到commit中。
+
+11.撤销修改
+
+git checkout -- readme.txt
+
+让文件回到最近一次 git commit 或 git add时的状态
+
+
