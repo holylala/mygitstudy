@@ -84,3 +84,17 @@ git push -u origin master
 
 git rm 文件名
 git commit
+
+13.从github克隆版本库
+
+cd到对应目录 比如d:
+
+git clone git@github.com:holylala/gitstudy.git
+
+
+第一次操作也需:
+
+git remote add origin https://github.com/holylala/gitstudy.git
+
+git push -u origin master 
+
